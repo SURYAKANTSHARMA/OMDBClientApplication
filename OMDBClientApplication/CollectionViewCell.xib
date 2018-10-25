@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="OMDBClientApplication" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="231" height="181"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="231" height="181"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="CacheImageView" translatesAutoresizingMaskIntoConstraints="NO" id="Lcu-MX-bOK" customClass="CacheImageView" customModule="OMDBClientApplication" customModuleProvider="target">
+                        <rect key="frame" x="20" y="8" width="191" height="102"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="102" id="qZm-nJ-Iz7"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Of8-XV-rhM">
+                        <rect key="frame" x="20" y="118" width="31" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ads-YV-aV6">
+                        <rect key="frame" x="20" y="145" width="27" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtu-ix-Jxt">
+                        <rect key="frame" x="184.5" y="145" width="26.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ads-YV-aV6" firstAttribute="leading" secondItem="Of8-XV-rhM" secondAttribute="leading" id="1XL-yO-7DM"/>
+                <constraint firstItem="dtu-ix-Jxt" firstAttribute="trailing" secondItem="Lcu-MX-bOK" secondAttribute="trailing" id="1fe-Vc-Odd"/>
+                <constraint firstAttribute="trailing" secondItem="Lcu-MX-bOK" secondAttribute="trailing" constant="20" id="F5C-Xd-4yu"/>
+                <constraint firstItem="ads-YV-aV6" firstAttribute="top" secondItem="Of8-XV-rhM" secondAttribute="bottom" constant="9" id="GDD-Md-B3Y"/>
+                <constraint firstAttribute="bottom" secondItem="ads-YV-aV6" secondAttribute="bottom" constant="20" id="NBX-WI-4n0"/>
+                <constraint firstItem="Of8-XV-rhM" firstAttribute="top" secondItem="Lcu-MX-bOK" secondAttribute="bottom" constant="8" id="SI1-S9-xF7"/>
+                <constraint firstItem="Lcu-MX-bOK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="WST-Wu-2Iv"/>
+                <constraint firstItem="Of8-XV-rhM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="biR-T8-V3q"/>
+                <constraint firstItem="Lcu-MX-bOK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="lVM-4b-N7l"/>
+                <constraint firstItem="dtu-ix-Jxt" firstAttribute="centerY" secondItem="ads-YV-aV6" secondAttribute="centerY" id="nML-eW-PRG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="231" height="181"/>
+            <connections>
+                <outlet property="posterImageView" destination="Lcu-MX-bOK" id="qDh-4Y-w79"/>
+                <outlet property="titleLabel" destination="Of8-XV-rhM" id="dvb-RQ-JD4"/>
+                <outlet property="typeLabel" destination="ads-YV-aV6" id="3Ul-xN-nVN"/>
+                <outlet property="yearLabel" destination="dtu-ix-Jxt" id="oJr-Y3-KoN"/>
+            </connections>
+            <point key="canvasLocation" x="-229.59999999999999" y="-38.23088455772114"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="CacheImageView" width="16" height="16"/>
+    </resources>
+</document>
