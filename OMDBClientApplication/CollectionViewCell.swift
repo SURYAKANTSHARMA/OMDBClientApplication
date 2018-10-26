@@ -16,7 +16,8 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var typeLabel: UILabel!
     
     func setUpView(search: Search) {
-        posterImageView.loadImage(urlString: search.poster ?? "")
+        posterImageView.image = nil
+        posterImageView.loadImage(urlString: search.poster ?? "") 
         titleLabel.text = search.title
         typeLabel.text = search.type
         

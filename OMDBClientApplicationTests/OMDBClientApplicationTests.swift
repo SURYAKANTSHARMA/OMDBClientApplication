@@ -22,6 +22,12 @@ class OMDBClientApplicationTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let year = "2008"
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        let date = formatter.date(from: year)!
+        XCTAssert(date.getElapsedInterval() == "10 years", "Both Expression should be equal ")
+        
     }
 
     func testPerformanceExample() {

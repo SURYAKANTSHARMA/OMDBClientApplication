@@ -1,24 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="BYZ-38-t0r" customClass="DetailViewController" customModule="OMDBClientApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XwT-UJ-sSo" customClass="CacheImageView" customModule="OMDBClientApplication" customModuleProvider="target">
+                                <rect key="frame" x="20" y="40" width="335" height="508.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsT-jh-Byp">
+                                <rect key="frame" x="20" y="593" width="32.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80u-WO-vgT">
+                                <rect key="frame" x="325.5" y="593.5" width="29.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5N-Ah-fbf">
+                                <rect key="frame" x="20" y="564.5" width="335" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="80u-WO-vgT" firstAttribute="centerY" secondItem="qsT-jh-Byp" secondAttribute="centerY" id="3Pz-5v-qvr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v5N-Ah-fbf" secondAttribute="trailing" constant="20" id="3Yl-wU-pTG"/>
+                            <constraint firstItem="XwT-UJ-sSo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ics-R4-P58"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="80u-WO-vgT" secondAttribute="trailing" constant="20" id="LR0-nn-joE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XwT-UJ-sSo" secondAttribute="trailing" constant="20" id="UNo-RF-7Uu"/>
+                            <constraint firstItem="v5N-Ah-fbf" firstAttribute="top" secondItem="XwT-UJ-sSo" secondAttribute="bottom" constant="16" id="aaq-HH-oIC"/>
+                            <constraint firstItem="qsT-jh-Byp" firstAttribute="top" secondItem="v5N-Ah-fbf" secondAttribute="bottom" constant="9" id="ao8-HF-zMt"/>
+                            <constraint firstItem="qsT-jh-Byp" firstAttribute="leading" secondItem="v5N-Ah-fbf" secondAttribute="leading" id="cGv-2z-mYt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="80u-WO-vgT" secondAttribute="bottom" constant="55.5" id="lWG-wT-Jgi"/>
+                            <constraint firstItem="v5N-Ah-fbf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ta8-66-3n7"/>
+                            <constraint firstItem="XwT-UJ-sSo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="w8e-ft-y0m"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="posterImageView" destination="XwT-UJ-sSo" id="Fgv-wg-0uB"/>
+                        <outlet property="titleLabel" destination="v5N-Ah-fbf" id="wD7-Aq-wum"/>
+                        <outlet property="typeLabel" destination="qsT-jh-Byp" id="X0v-1o-5y9"/>
+                        <outlet property="yearLabel" destination="80u-WO-vgT" id="LT0-lf-tjZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="294" y="18"/>
         </scene>
     </scenes>
 </document>

@@ -15,8 +15,7 @@
 		9A332426216CD3A300575FE8 /* CacheImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A332425216CD3A300575FE8 /* CacheImageView.swift */; };
 		9A332428216CD58800575FE8 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A332427216CD58800575FE8 /* UICollectionView+Extension.swift */; };
 		9A691642216E0DAD00DAB9F1 /* FavExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A691641216E0DAD00DAB9F1 /* FavExtenstion.swift */; };
-		9A691649216E20B900DAB9F1 /* LoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A691647216E20B900DAB9F1 /* LoadingCollectionViewCell.swift */; };
-		9A69164A216E20B900DAB9F1 /* LoadingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A691648216E20B900DAB9F1 /* LoadingCollectionViewCell.xib */; };
+		9A6A6ACD21833D5000C768AB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A6ACC21833D5000C768AB /* DetailViewController.swift */; };
 		9A92D2FF216B59D900BC61B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A92D2FE216B59D900BC61B7 /* AppDelegate.swift */; };
 		9A92D301216B59D900BC61B7 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A92D300216B59D900BC61B7 /* CollectionViewController.swift */; };
 		9A92D304216B59D900BC61B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A92D302216B59D900BC61B7 /* Main.storyboard */; };
@@ -61,8 +60,7 @@
 		9A332425216CD3A300575FE8 /* CacheImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CacheImageView.swift; path = ../../../Projects/Driver/Driver/Helper/Wrappers/CacheImageView.swift; sourceTree = "<group>"; };
 		9A332427216CD58800575FE8 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		9A691641216E0DAD00DAB9F1 /* FavExtenstion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavExtenstion.swift; sourceTree = "<group>"; };
-		9A691647216E20B900DAB9F1 /* LoadingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCollectionViewCell.swift; sourceTree = "<group>"; };
-		9A691648216E20B900DAB9F1 /* LoadingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCollectionViewCell.xib; sourceTree = "<group>"; };
+		9A6A6ACC21833D5000C768AB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9A92D2FB216B59D900BC61B7 /* OMDBClientApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OMDBClientApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A92D2FE216B59D900BC61B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A92D300216B59D900BC61B7 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -177,14 +175,13 @@
 				9A92D359216B752400BC61B7 /* BatmanManager.swift */,
 				9A92D35B216B7DA300BC61B7 /* Model.swift */,
 				9A92D302216B59D900BC61B7 /* Main.storyboard */,
+				9A6A6ACC21833D5000C768AB /* DetailViewController.swift */,
 				9A92D308216B59DC00BC61B7 /* Assets.xcassets */,
 				9A92D30A216B59DC00BC61B7 /* LaunchScreen.storyboard */,
 				9A92D30D216B59DC00BC61B7 /* Info.plist */,
 				9A92D305216B59D900BC61B7 /* OMDBClientApplication.xcdatamodeld */,
 				9A332421216CD12400575FE8 /* CollectionViewCell.swift */,
 				9A332422216CD12400575FE8 /* CollectionViewCell.xib */,
-				9A691647216E20B900DAB9F1 /* LoadingCollectionViewCell.swift */,
-				9A691648216E20B900DAB9F1 /* LoadingCollectionViewCell.xib */,
 			);
 			path = OMDBClientApplication;
 			sourceTree = "<group>";
@@ -317,7 +314,6 @@
 				9A92D330216B5C9F00BC61B7 /* StagingConfig.xcconfig in Resources */,
 				9A92D30C216B59DC00BC61B7 /* LaunchScreen.storyboard in Resources */,
 				9A92D309216B59DC00BC61B7 /* Assets.xcassets in Resources */,
-				9A69164A216E20B900DAB9F1 /* LoadingCollectionViewCell.xib in Resources */,
 				9A92D304216B59D900BC61B7 /* Main.storyboard in Resources */,
 				9A332424216CD12400575FE8 /* CollectionViewCell.xib in Resources */,
 			);
@@ -401,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A6A6ACD21833D5000C768AB /* DetailViewController.swift in Sources */,
 				9A691642216E0DAD00DAB9F1 /* FavExtenstion.swift in Sources */,
 				9A332423216CD12400575FE8 /* CollectionViewCell.swift in Sources */,
 				9A332428216CD58800575FE8 /* UICollectionView+Extension.swift in Sources */,
@@ -413,7 +410,6 @@
 				9A92D307216B59D900BC61B7 /* OMDBClientApplication.xcdatamodeld in Sources */,
 				9A92D35C216B7DA300BC61B7 /* Model.swift in Sources */,
 				9A332426216CD3A300575FE8 /* CacheImageView.swift in Sources */,
-				9A691649216E20B900DAB9F1 /* LoadingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

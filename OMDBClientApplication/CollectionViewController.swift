@@ -44,7 +44,7 @@ class CollectionViewController: UICollectionViewController {
     
     private func intialSetUp() {
         collectionView.registerCell(String(describing: CollectionViewCell.self))
-        collectionView.registerCell(String(describing: LoadingCollectionViewCell.self))
+       // collectionView.registerCell(String(describing: LoadingCollectionViewCell.self))
         collectionView.dataSource = self
         let cellSize = CGSize(width: view.frame.width/2 - 20 , height: 181)
         let layout = UICollectionViewFlowLayout()
@@ -106,13 +106,16 @@ extension CollectionViewController {
                 cell.setUpView(search: search)
             }
             return cell
-        } else {
-            let cell: LoadingCollectionViewCell = collectionView.dequeueReusableCell(indexPath: indexPath)
-            fetchMoreData()
-            return cell
         }
-        
+        fatalError("Unexpected Case")
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let index = indexPath.row
+        let detailVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: DetailViewController.self)) as! DetailViewController
+        
+        detailVC.search = searchCoordinator.search[index]
+        navigationController?.push(viewController: detailVC)
+    }
 }
 

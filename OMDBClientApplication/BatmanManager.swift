@@ -39,13 +39,9 @@ class BatmanManager: NSObject {
             }
             if let coordinator: SearchCoordinator = decode(json: json) {
                 // handle if there searches pre exist
-                print("Before Append")
-                print(self.searchCoordinator?.search.count)
                 
                 if let  _ = self.searchCoordinator {
                     self.searchCoordinator.search.append(contentsOf: coordinator.search)
-                    print("After Append")
-                    print(self.searchCoordinator.search.count)
                     callback(self.searchCoordinator, nil)
                 } else if self.currentPage == 0 {
                     self.searchCoordinator = coordinator
